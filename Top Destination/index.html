@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyful Morocco Adventures - Top Destination</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="./favicon1.png" type="image/svg+xml">
+</head>
+<body>
+
+    <div id="hero">
+        <div class="navbar">
+            <a href="../index.html">
+            <img src="images/logo-blue.png" class="logo">
+            </a>
+            <div class="user">
+                <a href="https://www.tripadvisor.co.uk/Attraction_Review-g293732-d20201234-Reviews-
+                Joyful_Morocco_Adventures-Casablanca_Casablanca_Settat.html" target="_blank">
+                <button type="button">Explore</button>
+                </a>
+                <a href="https://www.instagram.com/joyful_morocco_adventures_?utm_source=ig_web_
+                button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <img src="images/user.png">
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="info">
+                <h1>DISCOVER</h1>
+                <p>Explore the charming coastal city of Essaouira with its vibrant arts scene and historic medina. <br>
+                Experience the stunning desert landscape of Agafay, perfect for camel rides and stargazing. <br>
+                Visit the serene oasis of Zagora, known for its picturesque palm groves and ancient kasbahs. <br>
+                Discover the majestic Ouzoud Waterfalls, a natural wonder surrounded by lush greenery. <br>
+                Finally, journey to Merzouga, famous for its breathtaking sand dunes and unforgettable camel treks. <br>
+                Each destination offers a unique blend of culture, history, and natural beauty, ensuring an unforgettable adventure.</p>
+            </div>
+        </div>
+
+        <div class="slider">
+            <img src="images/left-arrow.png" id="prev">
+            <div class="preview">
+                <img src="images/bg1.jpg" class="active thumbnail">
+                <img src="images/bg2.jpg" class="thumbnail">
+                <img src="images/bg3.jpg" class="thumbnail">
+                <img src="images/bg4.jpg" class="thumbnail">
+                <img src="images/bg5.jpg" class="thumbnail">
+            </div>
+            <img src="images/right-arrow.png" id="next">
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+
+        var prev = document.getElementById("prev");
+        var next = document.getElementById("next");
+        var thumbnail = document.getElementsByClassName("thumbnail");
+        var hero = document.getElementById("hero");
+
+        var backgroundImg = new Array(
+            "images/bg1.jpg",
+            "images/bg2.jpg",
+            "images/bg3.jpg",
+            "images/bg4.jpg",
+            "images/bg5.jpg",
+        );
+
+        let i = 0;
+        next.onclick = function(){
+
+            if(i < 4){
+                hero.style.backgroundImage = 'url("'+backgroundImg[i+1]+'")';
+            thumbnail[i+1].classList.add("active");
+            thumbnail[i].classList.remove("active");
+            i++;
+            }
+            
+        }
+        prev.onclick = function(){
+
+            if(i > 0){
+                hero.style.backgroundImage = 'url("'+backgroundImg[i-1]+'")';
+            thumbnail[i-1].classList.add("active");
+            thumbnail[i].classList.remove("active");
+            i--;
+            }
+            
+        }
+
+
+    </script>
+    
+</body>
+</html>
