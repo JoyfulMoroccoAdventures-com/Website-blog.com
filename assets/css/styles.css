@@ -2198,7 +2198,20 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1.5rem;
   }
+
+    .about__img{
+      display: block;
+
+    }
+  
 }
+
+@media screen and (max-width: 767px) {
+  .about__img{
+    display: none;
+  }
+}
+
 
 @media screen and (min-width: 992px) {
   .sectionse{
